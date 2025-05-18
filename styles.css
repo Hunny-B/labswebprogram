@@ -6,6 +6,14 @@ body {
   background-color: #f9fafb;
   color: #222;
   transition: background 0.3s, color 0.3s;
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (max-width: 600px) {
@@ -34,10 +42,32 @@ h2 {
   margin-top: 40px;
 }
 
+h2:hover {
+  color: #2d89ef;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
 .hidden {
   display: none;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button:active {
+  transform: scale(0.98);
+}
 
 
 
@@ -73,6 +103,7 @@ section {
   padding: 20px;
   border-radius: 8px;
   margin-top: 15px;
+  cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -104,12 +135,13 @@ section {
   padding: 8px 12px;
   border-radius: 20px;
   font-weight: bold;
+  cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .skill-list li:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 91, 150, 0.3);
 }
 
 /* === Comments === */
@@ -300,6 +332,10 @@ body.dark .card,
 body.dark #comments-list li {
   background-color: #1f1f1f;
   border-left-color: #90caf9;
+}
+
+body.dark .card:hover {
+  box-shadow: 0 0 12px rgba(144, 202, 249, 0.2);
 }
 
 body.dark #comments-list li strong {
