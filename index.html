@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Резюме - Круціло Віталій</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div style="text-align: right; padding: 10px 20px;">
+    <button class="theme-toggle-button" id="theme-switch">🌙 Змінити тему</button>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Круціло Віталій Віталійович</h1>
+      <p class="contact">vitalii.krutsilo.ki.2021@lpnu.ua | 067 298 20 19 | м. Черкаси</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Про себе</h2>
+      <p>Маю бойовий досвід, технічну освіту у сфері кібербезпеки та володію навичками роботи з дронами. Шукаю посаду інструктора з використання безпілотних авіаційних систем для підготовки військових фахівців.</p>
+    </section>
+
+    <section class="experience">
+      <h2>Досвід</h2>
+      <div class="card">
+        <h3>Військовослужбовець — Національна гвардія України</h3>
+        <p class="duration">2023 – теперішній час</p>
+        <ul>
+          <li>Участь у бойових діях</li>
+          <li>Проведення повітряної розвідки з використанням БПЛА</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Освіта</h2>
+      <div class="card">
+        <h3>Львівська Політехніка</h3>
+        <p>Кібербезпека (2021 — теперішній час)</p>
+        <h3>Черкаський фізико-математичний ліцей</h3>
+        <p>Закінчив у 2021 році</p>
+      </div>
+    </section>
+
+    <section class="certificates">
+      <h2>Сертифікати</h2>
+      <div class="card">
+        <ul>
+          <li>Безпека в інтернеті під час війни: практичний курс</li>
+          <li>Сертифікат з англійської мови — рівень B2+</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Навички</h2>
+      <ul class="skill-list">
+        <li>Повітряна розвідка</li>
+        <li>Бойовий досвід</li>
+        <li>Робота з дронами</li>
+        <li>Кібербезпека</li>
+        <li>Українська (рідна)</li>
+        <li>Російська (вільно)</li>
+        <li>Англійська (вільно)</li>
+      </ul>
+    </section>
+
+    <section class="toggle-comments">
+      <button id="toggle-comments-btn">Показати коментарі</button>
+    </section>
+
+    <section id="comments-section" class="comments hidden">
+      <h2>Коментарі роботодавців</h2>
+      <ul id="comments-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Круціло Віталій</p>
+      <ul id="localStorage-data"></ul>
+    </div>
+  </footer>
+
+  <div id="feedback-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Зворотній зв'язок</h2>
+      <form action="https://formspree.io/f/xkgrylpj" method="POST">
+        <label>Ім’я:<br>
+          <input type="text" name="name" required>
+        </label><br>
+
+        <label>Email:<br>
+          <input type="email" name="email" required>
+        </label><br>
+
+        <label>Телефон:<br>
+          <input type="tel" name="phone" required>
+        </label><br>
+
+        <label>Повідомлення:<br>
+          <textarea name="message" rows="4" required></textarea>
+        </label><br>
+
+        <button type="submit">Відправити</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
